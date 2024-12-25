@@ -1,0 +1,4 @@
+title: Meu Site
+description: Descrição do meu site
+baseurl: "" # Deixe vazio ou defina o caminho se o site não estiver na raiz
+url: "http://meusite.com" # URL do seu site
