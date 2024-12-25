@@ -1,0 +1,2 @@
+- name: Build Jekyll site
+  run: bundle exec jekyll build --source ./docs --destination ./docs/_site
