@@ -10,7 +10,7 @@
             background-color: #f8f8f8;
         }
 
-        header {
+        .hero {
             background: url('https://www.tenutadelannunziata.it/uploads/ferragosto-2019ristorante-quercustenuta-de-lannunziata.jpg') no-repeat center center/cover;
             height: 100vh;
             color: white;
@@ -21,17 +21,17 @@
             align-items: center;
         }
 
-        header h1 {
+        .hero h1 {
             font-size: 3rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
         }
 
-        header p {
+        .hero p {
             font-size: 1.2rem;
             margin: 10px 0;
         }
 
-        header a {
+        .hero a {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
@@ -43,7 +43,7 @@
             transition: background 0.3s;
         }
 
-        header a:hover {
+        .hero a:hover {
             background-color: #b38c4d;
         }
 
