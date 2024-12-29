@@ -17,13 +17,14 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            /* justify-content: center;
+            align-items: center; */
         }
 
         .hero h1 {
             font-size: 3rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: left;
         }
 
         .hero p {

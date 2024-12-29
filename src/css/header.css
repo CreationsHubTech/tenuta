@@ -60,6 +60,8 @@ header{
         flex-direction: column;
         gap: 12px;
         margin: 12px 0px;
+        list-style: none;
+        text-align: left;
     }
     
 }

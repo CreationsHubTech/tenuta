@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    align-items: center;
+}
+
+.left {
+    flex: 1;    
+    text-align: left;
+    padding-right: 20px;
+}
+
+.left h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.left h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #777;
+    margin: 10px 0;
+}
+
+.left p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 50%; /* 50% do contêiner pai */
+    height: auto; /* Mantém a proporção */
+}
+
+
+.right {
+    position: relative;
+    width: 100vw; /* Garante que o contêiner também ocupe toda a largura */
+    height: 100vh; /* Garante que o contêiner também ocupe toda a altura */
+    overflow: hidden; /* Evita rolagem se a imagem ultrapassar os limites */
+}
+
+.right img {
+    position: absolute;
+    right: 0; /* Cola na borda direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para que o centro da imagem fique alinhado */
+    max-height: 100vh; /* Garante que a imagem não ultrapasse a altura da tela */
+    width: auto; /* Mantém a proporção */
+}
+
