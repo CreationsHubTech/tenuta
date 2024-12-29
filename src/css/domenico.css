@@ -1,384 +1,152 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+/* Escopo exclusivo para a página Domenico */
+body.domenico {
     font-family: Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
     background-color: #ffffff;
+    margin: 0;
 }
 
-.container {
+body.domenico .container {
     display: flex;
     max-width: 1200px;
     width: 90%;
     align-items: center;
+    margin: auto;
 }
 
-.left {
+body.domenico .left {
     flex: 1;    
     text-align: left;
     padding-right: 20px;
 }
 
-.left h1 {
+body.domenico .left h1 {
     font-size: 3rem;
     font-weight: 400;
     color: #333;
 }
 
-.left h2 {
+body.domenico .left h2 {
     font-size: 1.5rem;
     font-weight: 300;
     color: #777;
     margin: 10px 0;
 }
 
-.left p {
+body.domenico .left p {
     font-size: 1rem;
     color: #555;
     margin-top: 10px;
 }
 
-.logo img {
-    width: 50%; /* 50% do contêiner pai */
-    height: auto; /* Mantém a proporção */
+body.domenico .logo img {
+    width: 50%;
+    height: auto;
 }
 
-
-.right {
+body.domenico .right {
     position: relative;
-    width: 100vw; /* Garante que o contêiner também ocupe toda a largura */
-    height: 100vh; /* Garante que o contêiner também ocupe toda a altura */
-    overflow: hidden; /* Evita rolagem se a imagem ultrapassar os limites */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.right img {
+body.domenico .right img {
     position: absolute;
-    right: 0; /* Cola na borda direita */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajusta para que o centro da imagem fique alinhado */
-    max-height: 100vh; /* Garante que a imagem não ultrapasse a altura da tela */
-    width: auto; /* Mantém a proporção */
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 100vh;
+    width: auto;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body.domenico #cards_menu {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
-body{
-    background-color: #fff;
+body.domenico #cards_menu h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
-.feature {
+
+body.domenico #cards_menu p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+body.domenico .cards_menu {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    text-align: center; /* Centraliza horizontalmente */
-    height: 100vh; /* (Opcional) Para ocupar a altura total da tela */
 }
 
+body.domenico .cards_menu .feature {
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-.btn-default {
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body.domenico .cards_menu .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.domenico .cards_menu .feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+body.domenico .btn-default {
+    display: inline-block;
+    padding: 10px 20px;
     background-color: #ffcb45;
-    border-radius: 12px;
-    padding: 10px 14px;
-    font-weight: 600;
-    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0,0.1);
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
-
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
-.btn-default:hover{
-    background-color: #ffcb46;
+body.domenico .btn-default:hover {
+    background-color: #e0a834;
 }
 
-/* antigo css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Responsividade */
+@media (max-width: 768px) {
+    body.domenico #cards_menu h2 {
+        font-size: 1.8rem;
+    }
+
+    body.domenico .cards_menu {
+        gap: 15px;
+    }
+
+    body.domenico .cards_menu .feature {
+        flex: 1 1 100%;
+        max-width: none;
+    }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-}
+@media (max-width: 480px) {
+    body.domenico #cards_menu h2 {
+        font-size: 1.5rem;
+    }
 
-.hero {
-    background: url('https://www.tenutadelannunziata.it/uploads/ferragosto-2019ristorante-quercustenuta-de-lannunziata.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-}
-
-.hero h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    text-align: left;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.hero a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #c59d5f;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.hero a:hover {
-    background-color: #b38c4d;
-}
-
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-section h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-section p {
-    margin-bottom: 30px;
-    color: #666;
-}
-
-/* .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.features {
-    flex: 1 1 300px;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
-    justify-content: center;
-}
-
-.feature img {
-    width: 100%;
-    max-width: 600px;
-    max-height: 300px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    border-radius: 10px;
-}
-
-.feature h3 {
-    margin: 15px 0 10px;
-    color: #333;
-}
-
-.feature p {
-    color: #666;
-} */
-
-#location {
-    display: flex;
-    flex-direction: column;
-    border: #333;
-    border-radius: 5px;
-    width: 50%;
-    height: 50%;
-}
-#partners {
-    display: flex;
-    flex-direction: column;
-    border: #333;
-    border-radius: 5px;
-    width: 50%;
-    height: 50%;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #c59d5f;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* antigo */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-}
-
-.hero {
-    background: url('https://www.tenutadelannunziata.it/uploads/ferragosto-2019ristorante-quercustenuta-de-lannunziata.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-}
-
-.hero h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    text-align: left;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-}
-
-.hero a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #c59d5f;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.hero a:hover {
-    background-color: #b38c4d;
-}
-
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-section h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-section p {
-    margin-bottom: 30px;
-    color: #666;
-}
-
-.features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.feature {
-    flex: 1 1 300px;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature img {
-    width: 100%;
-    max-width: 600px;
-    max-height: 300px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    border-radius: 10px;
-}
-
-.feature h3 {
-    margin: 15px 0 10px;
-    color: #333;
-}
-
-.feature p {
-    color: #666;
-}
-
-#location {
-    display: flex;
-    flex-direction: column;
-    border: #333;
-    border-radius: 5px;
-    width: 50%;
-    height: 50%;
-}
-#partners {
-    display: flex;
-    flex-direction: column;
-    border: #333;
-    border-radius: 5px;
-    width: 50%;
-    height: 50%;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #c59d5f;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    body.domenico .btn-default {
+        width: 100%;
+        padding: 10px;
+    }
 }
