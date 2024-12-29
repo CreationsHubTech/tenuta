@@ -77,10 +77,12 @@ body {
 body{
     background-color: #fff;
 }
-.features {
+.feature {
     display: flex;
+    flex-direction: column;
     align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center;
+    text-align: center; /* Centraliza horizontalmente */
     height: 100vh; /* (Opcional) Para ocupar a altura total da tela */
 }
 
