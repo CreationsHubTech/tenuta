@@ -31,10 +31,13 @@ header{
 
 #mobile_btn {
     display: none;
+    align-items: left;
 }
 
 #mobile_menu {
     display: none;
+    align-items: left;
+    justify-content: left;
 }
 
 @media screen  and (max-width: 1170px) {
@@ -52,7 +55,7 @@ header{
     #mobile_menu.active {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
 
     #mobile_nav_list {
