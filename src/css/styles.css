@@ -68,6 +68,7 @@ body {
 .hero p {
     font-size: 24pxm;
     margin: 10px 0;
+    text-align: left;
 }
 
 .hero a {
