@@ -3,6 +3,7 @@ body.domenico {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
 }
 
 body.domenico .container {
@@ -45,7 +46,7 @@ body.domenico .logo img {
 
 body.domenico .right {
     position: relative;
-    width: 100vw;
+    width: 100%; /* Ajustado para evitar rolagem horizontal */
     height: 100vh;
     overflow: hidden;
 }
@@ -83,8 +84,8 @@ body.domenico .cards_menu {
 }
 
 body.domenico .cards_menu .feature {
-    flex: 1 1 300px;
-    max-width: 300px;
+    flex: 1 1 250px;
+    max-width: 250px;
     text-align: center;
     background: #fff;
     border: 1px solid #ddd;
@@ -107,9 +108,21 @@ body.domenico .cards_menu .feature img {
     margin-bottom: 10px;
 }
 
+body.domenico .cards_menu .feature h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+body.domenico .cards_menu .feature p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
 body.domenico .btn-default {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #ffcb45;
     color: #000;
     text-decoration: none;
@@ -137,6 +150,17 @@ body.domenico .btn-default:hover {
     body.domenico .cards_menu .feature {
         flex: 1 1 100%;
         max-width: none;
+    }
+
+    body.domenico .right {
+        height: auto; /* Ajuste para evitar overflow em dispositivos menores */
+    }
+
+    body.domenico .right img {
+        max-width: 100%; /* Ajusta a imagem para telas menores */
+        max-height: none;
+        position: static;
+        transform: none;
     }
 }
 
