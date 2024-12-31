@@ -1,3 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+h1, h2, h3 {
+    font-family: 'Catchy Mager';
+}
+p {
+    font-family: 'Montserrat';
+}
+ul {
+    font-family: 'Montserrat';
+}
+ul {
+    font-family: 'Times New Roman', Times, serif'
+}
+
 header{
     width: 100%;
     padding: 28px 8%;
@@ -9,18 +26,25 @@ header{
     justify-content: space-between;
 }
 #nav_logo {
-    font-size: 24px;
+    font-size: 4px;
     color: #e9a209;
 }
+#navbar img {
+    width: 105px; /* Define a largura desejada */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 15px;
+}
+
 #nav_list {
     display: flex;
     list-style: none;
     gap: 48px;
+    font-size: 24px;
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #1d1d1dad;
+    color: #fff;
     font-weight: 600;
 }
 
