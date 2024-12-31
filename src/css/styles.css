@@ -293,6 +293,45 @@ section p {
     width: 50%;
     height: 50%;
 }
+/* About */
+.luxury-hotel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco */
+    font-family: 'Georgia', serif; /* Estilo clássico */
+}
+
+/* Conteúdo do texto */
+.text-content {
+    width: 50%;
+    padding-right: 20px;
+    color: #5a3921; /* Cor de texto similar ao marrom */
+    margin-left: 100px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Conteúdo da imagem */
+.image-content {
+    width: 40%; /* Ajusta a largura da imagem */
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada */
+}
+
 
 /* Footer */
 .footer {
