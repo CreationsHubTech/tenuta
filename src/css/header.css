@@ -24,14 +24,20 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 #nav_logo {
     font-size: 4px;
     color: #e9a209;
 }
 #navbar img {
-    width: 105px; /* Define a largura desejada */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 105px;
+    height: auto;
     margin-left: 15px;
 }
 
@@ -56,12 +62,21 @@ header{
 #mobile_btn {
     display: none;
     align-items: left;
+    color: #fff;
 }
 
 #mobile_menu {
     display: none;
-    align-items: left;
-    justify-content: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 @media screen  and (max-width: 1170px) {
