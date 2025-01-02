@@ -101,7 +101,7 @@ body {
     margin-left: 10%;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ffcb45;
+    background-color: #0056D2;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
@@ -191,15 +191,15 @@ section p {
 /* Container layout */
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite empilhamento no mobile */
-    gap: 20px; /* Espaço entre os elementos */
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 20px;
 }
 
 /* Section styling */
 #location,
 #partners {
-    flex: 1 1 45%; /* Ocupa 45% do espaço no desktop */
+    flex: 1 1 45%;
     max-width: 50%;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -331,13 +331,40 @@ section p {
 
 /* Conteúdo da imagem */
 .image-content {
-    width: 40%; /* Ajusta a largura da imagem */
+    width: 40%;
 }
 
 .image-content img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Borda arredondada */
+    border-radius: 10px;
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    .luxury-hotel {
+        display: block;
+        text-align: center;
+    }
+
+    .image-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 0.9rem;
+    }
 }
 
 
