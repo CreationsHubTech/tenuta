@@ -24,19 +24,19 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     z-index: 1000;
     padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
 }
 #nav_logo {
-    font-size: 4px;
+    font-size: 3px;
     color: #e9a209;
 }
 #navbar img {
-    width: 105px;
+    width: 80px;
     height: auto;
     margin-left: 15px;
 }
@@ -83,11 +83,13 @@ header{
     #nav_list,
     #navbar .btn-default {
         display: none;
+        position: fixed;
     }
     #mobile_btn {
-        display: block;
+        display: none;
         border: none;
         background-color: transparent;
+        box-shadow: none;
         font-size: 1.5rem;
         cursor: pointer;
     }
