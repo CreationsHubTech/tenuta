@@ -13,7 +13,7 @@ body{
     align-items: center; /* Centraliza verticalmente */
     justify-content: center;
     text-align: center;
-    height: 100vh; /* (Opcional) Para ocupar a altura total da tela */
+    height: 100%; /* (Opcional) Para ocupar a altura total da tela */
 }
 
 
@@ -118,11 +118,11 @@ body {
 /* Responsividade */
 @media (max-width: 1200px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .hero #benvenuto p {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 }
 
@@ -132,14 +132,19 @@ body {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 3rem;
         margin-left: 5%;
+        margin-top: 20px;
     }
 
-    .hero #benvenuto,
-    .hero #natural {
+    .hero #benvenuto {
         margin-left: 5%;
         font-size: 1rem;
+    }
+    .hero #natural {
+        margin-left: 5%;
+        font-size: 1.5rem;
+        margin-top: -15px;
     }
 
     .hero #benvenuto p {
@@ -317,6 +322,7 @@ section p {
     padding-right: 20px;
     color: #5a3921; /* Cor de texto similar ao marrom */
     margin-left: 100px;
+    
 }
 
 .text-content h1 {
@@ -345,6 +351,8 @@ section p {
     .luxury-hotel {
         display: block;
         text-align: center;
+        /* justify-items: left; */
+        justify-items:center;
     }
 
     .image-content {
@@ -359,11 +367,12 @@ section p {
     }
 
     .text-content h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .text-content p {
         font-size: 0.9rem;
+        text-align: justify;
     }
 }
 
