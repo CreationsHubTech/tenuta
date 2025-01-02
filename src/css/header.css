@@ -38,7 +38,7 @@ header{
 #navbar img {
     width: 80px;
     height: auto;
-    margin-left: 15px;
+    margin-left: -20px;
 }
 
 #nav_list {
