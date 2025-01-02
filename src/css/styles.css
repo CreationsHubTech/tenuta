@@ -7,15 +7,26 @@
 body{
     background-color: #fff;
 }
+
+body {
+    font-family: 'Catchy Mager', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+h1, h2, h3 {
+    font-family: 'Catchy Mager';
+}
+p {
+    font-family: 'Montserrat';
+}
 .feature {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza verticalmente */
+    align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100%; /* (Opcional) Para ocupar a altura total da tela */
+    height: 100%;
 }
-
 
 .btn-default {
     border: none;
@@ -102,7 +113,7 @@ body {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #0056D2;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
@@ -132,24 +143,23 @@ body {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 5rem;
         margin-left: 5%;
         margin-top: 20px;
     }
 
     .hero #benvenuto {
         margin-left: 5%;
-        font-size: 1rem;
+        font-size: 0.90rem;
     }
+
     .hero #natural {
         margin-left: 5%;
         font-size: 1.5rem;
-        margin-top: -15px;
+        margin-top: -13px;
     }
 
-    .hero #benvenuto p {
-        font-size: 4rem;
-    }
+  
 
     .hero .btn-default {
         margin-left: 5%;
@@ -159,11 +169,11 @@ body {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .hero #benvenuto p {
-        font-size: 3rem;
+        font-size: 1rem;
     }
 
     .hero .btn-default {
@@ -237,19 +247,6 @@ section p {
     }
 }
 
-
-body {
-    font-family: 'Catchy Mager', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f8f8;
-}
-h1, h2, h3 {
-    font-family: 'Catchy Mager';
-}
-p {
-    font-family: 'Montserrat';
-}
-
 section {
     padding: 50px 20px;
     text-align: center;
@@ -281,10 +278,10 @@ section p {
 }
 
 .feature img {
-    width: 100%;
+    width: auto;
+    height: auto;
     max-width: 600px;
     max-height: 300px;
-    height: auto;
     margin: 0 auto;
     display: block;
     border-radius: 10px;
@@ -320,7 +317,7 @@ section p {
 .text-content {
     width: 50%;
     padding-right: 20px;
-    color: #5a3921; /* Cor de texto similar ao marrom */
+    color: #5a3921;
     margin-left: 100px;
     
 }

@@ -20,15 +20,15 @@ header{
     padding: 28px 8%;
 }
 #navbar {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* position: fixed; */
     top: 0;
-    left: 0;
+    margin-left: 20px;
     z-index: 1000;
-    padding: 15px 20px;
+    padding: 0px;
     box-shadow: none;
 }
 #nav_logo {
