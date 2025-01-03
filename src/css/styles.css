@@ -19,14 +19,6 @@ h1, h2, h3 {
 p {
     font-family: 'Montserrat';
 }
-.feature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-}
 
 .btn-default {
     border: none;
@@ -209,13 +201,15 @@ section p {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    justify-content: center;
 }
 
 /* Section styling */
 #location,
 #partners {
     flex: 1 1 45%;
-    max-width: 50%;
+    max-width: 80%;
+    max-height: 50%;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -285,15 +279,31 @@ section p {
     display: block;
     border-radius: 10px;
 }
+.feature_title h2 {
+    font-size: 32px;
+    margin: 32px 0 10px;
+    color: #5a3921;
+}
+.feature_title p{
+    color: #5a3921;
+}
 
 .feature h3 {
     margin: 15px 0 10px;
-    color: #333;
+    color: #5a3921;
 }
 
 .feature p {
-    color: #666;
+    color: #5a3921;
 }
+.feature a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
 #partners {
     display: flex;
     flex-direction: column;
@@ -329,11 +339,13 @@ section p {
 .text-content p {
     font-size: 1rem;
     line-height: 1.8;
+    text-align: justify;
+    
 }
 
 /* Conteúdo da imagem */
 .image-content {
-    width: 40%;
+    width: 50%;
 }
 
 .image-content img {
@@ -346,9 +358,6 @@ section p {
 @media (max-width: 768px) {
     .luxury-hotel {
         display: block;
-        text-align: center;
-        /* justify-items: left; */
-        justify-items:center;
     }
 
     .image-content {
@@ -360,6 +369,7 @@ section p {
         width: 100%;
         margin-left: 0;
         padding: 0 10px;
+        text-align: justify;
     }
 
     .text-content h1 {
@@ -372,32 +382,101 @@ section p {
     }
 }
 
+/* Services */
 
-/* Footer */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.service-card {
+    width: 500px;
+    height: 400px;
+    perspective: 1000px; /* Cria o efeito 3D */
+}
+
+.service-card .card-front,
+.service-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta o lado não visível */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.6s ease; /* Animação suave */
+}
+
+.service-card .card-front {
+    background-color: #fff;
+}
+
+.service-card .card-front img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.service-card .card-back {
+    background-color: #5a3921;
+    color: #fff;
+    text-align: justify;
+    transform: rotateY(180deg); /* Inicialmente oculta */
+    padding: 20px;
+}
+.service-card .card-back h3 {
+    font-size: 30px;
+
+}
+
+.service-card:hover .card-front {
+    transform: rotateY(180deg); /* Gira para ocultar a frente */
+}
+
+.service-card:hover .card-back {
+    transform: rotateY(0); /* Gira para exibir a traseira */
+}
+
+
+
 .footer {
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
     justify-content: space-between;
+    gap: 5px; /* Espaçamento entre os elementos */
     padding: 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #5a3921;
 }
 
 .footer-section {
-    flex: 1;
+    flex: 1 1 calc(25% - 10px); /* Cada seção ocupa 25% da largura com espaçamento */
     padding: 10px;
-    text-align: center;
+    text-align: left;
+    border: solid;
+    border-color: #ddd;
+    border-radius: 10px;
 }
 
 .footer-section h4 {
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: #ffcb45;
+    color: #5a3921;
 }
 
 .footer-section p,
 .footer-section a {
     font-size: 0.9rem;
-    color: #fff;
+    color: #5a3921;
     text-decoration: none;
     margin: 5px 0;
 }
@@ -406,14 +485,29 @@ section p {
     color: #ffcb45;
 }
 
+/* Estilo das imagens */
+.footer-images img {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    max-width: 100px; /* Limita a largura das imagens */
+    margin: 5px auto; /* Centraliza as imagens */
+    border-radius: 10px;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .footer {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Empilha os elementos no mobile */
+        align-items: left;
     }
 
     .footer-section {
+        flex: 1 1 100%; /* Cada seção ocupa 100% no mobile */
         margin-bottom: 15px;
+    }
+
+    .footer-images img {
+        max-width: 100%; /* Imagens se ajustam à largura disponível */
     }
 }
