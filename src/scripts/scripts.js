@@ -1,36 +1,90 @@
-$(document).ready(function() {
-    $('#mobile_btn').on('click', function () {
-        $('#mobile_menu').toggleClass('active');
-        $('#mobile_btn').find('i').toggleClass('fa-x');
-    });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".service-card");
 
-    const observerOptions = {
-        root: null, // Observa em relação à viewport
-        rootMargin: "0px",
-        threshold: 0.5, // Ativa quando 50% do elemento está visível
-    };
+    // Detecta se está no mobile
+    const isMobile = () => window.innerWidth <= 768;
 
-    const flipCard = (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Quando o card entra na viewport
-                entry.target.querySelector(".card-front").style.transform = "rotateY(180deg)";
-                entry.target.querySelector(".card-back").style.transform = "rotateY(0)";
-            } else {
-                // Quando o card sai da viewport
-                entry.target.querySelector(".card-front").style.transform = "rotateY(0)";
-                entry.target.querySelector(".card-back").style.transform = "rotateY(180deg)";
+    // Função para aplicar animação no hover (desktop)
+    const setupHoverEffects = () => {
+        cards.forEach((card) => {
+            const cardFront = card.querySelector(".card-front");
+            const cardBack = card.querySelector(".card-back");
+
+            if (cardFront && cardBack) {
+                card.addEventListener("mouseenter", () => {
+                    cardFront.style.transform = "rotateY(180deg)";
+                    cardBack.style.transform = "rotateY(0)";
+                });
+
+                card.addEventListener("mouseleave", () => {
+                    cardFront.style.transform = "rotateY(0)";
+                    cardBack.style.transform = "rotateY(180deg)";
+                });
             }
         });
     };
 
-    const observer = new IntersectionObserver(flipCard, observerOptions);
+    // Função para aplicar animação no scroll (mobile)
+    const setupScrollEffects = () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5,
+        };
 
-    cards.forEach(card => {
-        observer.observe(card);
+        const flipCard = (entries) => {
+            entries.forEach((entry) => {
+                const cardFront = entry.target.querySelector(".card-front");
+                const cardBack = entry.target.querySelector(".card-back");
+
+                if (cardFront && cardBack) {
+                    if (entry.isIntersecting) {
+                        cardFront.style.transform = "rotateY(180deg)";
+                        cardBack.style.transform = "rotateY(0)";
+                    } else {
+                        cardFront.style.transform = "rotateY(0)";
+                        cardBack.style.transform = "rotateY(180deg)";
+                    }
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(flipCard, observerOptions);
+
+        cards.forEach((card) => {
+            observer.observe(card);
+        });
+    };
+
+    // Adiciona os comportamentos conforme o tipo de dispositivo
+    const applyBehaviors = () => {
+        if (isMobile()) {
+            setupScrollEffects(); // Mobile: scroll
+        } else {
+            setupHoverEffects(); // Desktop: hover
+        }
+    };
+
+    applyBehaviors();
+
+    // Reaplica comportamentos ao redimensionar a janela
+    window.addEventListener("resize", () => {
+        cards.forEach((card) => {
+            // Remove transformações para evitar comportamentos inesperados
+            const cardFront = card.querySelector(".card-front");
+            const cardBack = card.querySelector(".card-back");
+            if (cardFront && cardBack) {
+                cardFront.style.transform = "rotateY(0)";
+                cardBack.style.transform = "rotateY(180deg)";
+            }
+        });
+
+        // Remove eventos existentes
+        cards.forEach((card) => {
+            card.replaceWith(card.cloneNode(true));
+        });
+
+        // Aplica os novos comportamentos
+        applyBehaviors();
     });
 });

@@ -445,6 +445,16 @@ section p {
 .service-card:hover .card-back {
     transform: rotateY(0); /* Gira para exibir a traseira */
 }
+@media (max-width: 768px) { /* Para dispositivos com largura de até 768px */
+    .service-card .card-back h3 {
+        font-size: 20px; /* Ajuste para um tamanho menor */
+    }
+
+    .service-card .card-back {
+        font-size: 14px; /* Tamanho menor para o texto geral */
+    }
+}
+
 
 
 
