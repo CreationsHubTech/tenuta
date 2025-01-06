@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #5a3921;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px;
+}
+
+/* Sidebar */
+.availability-form {
+    width: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.availability-form input,
+.availability-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.availability-form button {
+    background-color: #5a3921;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.availability-form button:hover {
+    background-color: #3d2717;
+}
+
+/* Rooms Section */
+.rooms {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.room-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    padding: 10px;
+    text-align: center;
+}
+
+.room-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.room-card h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.room-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.room-card .btn {
+    background-color: #ff8000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.room-card .btn:hover {
+    background-color: #e06900;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-wrap: wrap;
+    }
+
+    .availability-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .rooms {
+        width: 100%;
+    }
+
+    .room-card {
+        width: 100%;
+    }
+}

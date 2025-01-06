@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota | Tenuta dell'Annunziata</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/prenota.css">
+</head>
+<body>
+    <header>
+        <h1>Prenota il tuo soggiorno</h1>
+    </header>
+
+    <main class="container">
+        <!-- Sidebar Availability Form -->
+        <section class="availability-form">
+            <h2>Verifica Disponibilità</h2>
+            <form id="availabilityForm">
+                <label for="checkin">Data di Arrivo</label>
+                <input type="date" id="checkin" required>
+
+                <label for="checkout">Data di Partenza</label>
+                <input type="date" id="checkout" required>
+
+                <label for="rooms">Camere</label>
+                <select id="rooms">
+                    <option value="1">1 Camera</option>
+                    <option value="2">2 Camere</option>
+                    <option value="3">3 Camere</option>
+                </select>
+
+                <label for="adults">Adulti</label>
+                <select id="adults">
+                    <option value="1">1 Adulto</option>
+                    <option value="2">2 Adulti</option>
+                    <option value="3">3 Adulti</option>
+                </select>
+
+                <label for="children">Bambini</label>
+                <select id="children">
+                    <option value="0">0 Bambini</option>
+                    <option value="1">1 Bambino</option>
+                    <option value="2">2 Bambini</option>
+                </select>
+
+                <button type="submit">Verifica Disponibilità</button>
+            </form>
+        </section>
+
+        <!-- Rooms Section -->
+        <section class="rooms">
+            <div class="room-card">
+                <img src="room1.jpg" alt="Camera doppia standard">
+                <h3>Camera doppia standard</h3>
+                <p>Calore, accoglienza, stile e comfort. Le camere standard vantano un letto matrimoniale...</p>
+                <button class="btn">Richiesta</button>
+            </div>
+
+            <div class="room-card">
+                <img src="room2.jpg" alt="Camera doppia superior">
+                <h3>Camera doppia superior</h3>
+                <p>Le camere superior si aprono con un’area living che dona un’immediata atmosfera...</p>
+                <button class="btn">Richiesta</button>
+            </div>
+
+            <div class="room-card">
+                <img src="room3.jpg" alt="Camera doppia deluxe">
+                <h3>Camera doppia deluxe</h3>
+                <p>Le camere deluxe mettono a disposizione uno spazio agiato di cui fare tesoro...</p>
+                <button class="btn">Richiesta</button>
+            </div>
+
+            <div class="room-card">
+                <img src="room4.jpg" alt="Red Suite e Salotto Belvedere">
+                <h3>Red Suite e Salotto Belvedere</h3>
+                <p>Unica camera del relais nella storica torretta d’osservazione della Tenuta...</p>
+                <button class="btn">Richiesta</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
